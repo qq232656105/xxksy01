@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+
+	
+	/*reset*/
+a{ text-decoration:none; display:block;}
+body,dl,dd{ margin:0; padding:0; color:#fff;}
+img{ border:none; display:block;}
+input{ margin:0; padding:0; border:0;}
+ul,li{ margin:0; padding:0; list-style:none;}
+	
+	
+	
+	
+	
+.main_focus_new{
+ background: url("MONOTONE/main_focus_new_bg01.png") no-repeat;
+ /*background-size: contain;*/
+ background-size: 100vw 173.59375vw;
+ /*width: 100vw;*/
+ /*height: 173.59375vw;*/
+ margin-top: 50px;
+ }
+	#main_focus_new_nav{
+		width: 100vw;
+		height: 24.21875vw;
+	}
+
+
+ #main_focus_new_nav span,#main_focus_new_nav span img,.main_focus_new_nav_new,.main_focus_new_nav_focus,.main_focus_new_nav_new img,.main_focus_new_nav_focus img{
+ width: 50vw;
+ height: 24.21875vw;
+ float: left;
+ }
+/*
+	.main_focus_new_nav_new img:active{
+		content:url("MONOTONE/grey新着アイテムページ.png");
+	}
+	.main_focus_new_nav_new img:active .main_focus_new_nav_focus img{
+		content:url("MONOTONE/ショップ内の注目商品.png");
+	}
+	.main_focus_new_nav_focus img:active{
+		content:url("MONOTONE/ショップ内の注目商品.png");
+	}
+	.main_focus_new_nav_focus img:active .main_focus_new_nav_new img{
+		content:url("MONOTONE/grey新着アイテムページ.png");
+	}
+	*/
+ #main_focus_new_nav_container{
+ 	width: 100vw;
+	height: 149.375vw;
+	}
+	#main_focus_new_nav_container section{
+		width: 85.625vw;
+		height: 129.6875vw; 
+		margin: 0 auto;
+		padding-top: 15.18072289156627vw;
+	}
+
+	.main_new, .main_focus{
+		width: 85.625vw;
+		height: 129.6875vw;
+	}
+	.main_new img, .main_focus img{
+		width: 85.625vw;
+		height: 129.6875vw;
+	}	
+
+	
+
+
+</style>
+<body>
+
+<!---->
+<div class="main_focus_new">
+	<div id="main_focus_new_nav">
+		<span class="main_focus_new_nav_new"><img src="MONOTONE/新着アイテムページ.png" id="grey_new"></span>
+ 		<span class="main_focus_new_nav_focus"><img src="MONOTONE/greyショップ内の注目商品.png" id="focus"></span>
+	</div>
+<!---->
+	<div id="main_focus_new_nav_container">
+		<section class="main_focus_new_tab"><div class="main_new"><img src="MONOTONE/main_new.png"></div></section>
+		<section class="main_focus_new_tab"><div class="main_focus"><img src="MONOTONE/main_focus.png"></div></section>
+	</div>
+</div>
+<script>
+ window.onload=function () {
+ 	var nav=document.getElementById('main_focus_new_nav');
+ 	var oNav=main_focus_new_nav.getElementsByTagName('span');
+ 	var container=document.getElementById('main_focus_new_nav_container');
+ 	var oDiv=main_focus_new_nav_container.getElementsByClassName('main_focus_new_tab');
+ 	for(var i=0;i<oNav.length;i++){
+ 		oNav[i].index=i;
+
+ 		oNav[i].onclick=function () { 
+ 			for(var i=0;i<oNav.length;i++){
+ 				oNav[i].className='';
+ 				oDiv[i].style.display="none";
+ 			}
+ 			this.className='main_focus_new_nav_new';
+ 			oDiv[this.index].style.display="block";
+	 
+ 			}
+ 			for(var m=1;m<oNav.length;m++){
+ 			oNav[m].className='';
+ 			oDiv[m].style.display="none";
+ 			}	
+ 	}
+ }
+</script>	
+	
+
+     
+
+
+
+</body>
+</html>
